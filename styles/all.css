@@ -1,0 +1,153 @@
+body {
+    font-family: minion-pro-caption, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #484848;
+    font-size: 35px;
+    text-align: left;
+    background: #FFF8EB;
+    margin: 30px;
+}
+
+div.tooltip {
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  width: 16%;
+}
+
+#titleText {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 35px;
+    font-family: minion-pro-caption, serif;
+    font-weight: 400;
+
+}
+
+#content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 25px;
+    color: #484848;
+    font-family: Courier New;
+    font-weight: 400;
+}
+
+#text {
+    height: 820px;
+    background-color: #FFF8EB;
+    font-size: 20px;
+}
+
+#awareness {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+#reflection {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+#vulnerability {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    color: #484848;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: line-through;
+}
+
+#odyssee {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+.exploring_button {
+    font-family: 'Courier new';
+    display: block;
+    color: #484848;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+.exploring_button:hover {
+    text-decoration: line-through;
+}
+
+.container {
+    display: table;
+}
+
+.container__inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#slogan {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 35px;
+    text-align: center;
+}
+
+.landing_btn {
+    border: 1px solid #484848;
+    background-color: white;
+    color: #484848;
+    padding: 20px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    font-family: 'Courier new';
+    text-decoration: none;
+    text-align: center;
+}
+
+.landing_btn:hover {
+    background-color: #F3F3F3;
+    color: #484848;
+}
+
+.center {
+    text-align: center;
+}
+
+#shiro-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.icongrey {
+    fill: greyColor;
+}

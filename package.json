@@ -1,0 +1,33 @@
+{
+  "name": "odyssee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piabocanegra/odyssee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piabocanegra/odyssee/issues"
+  },
+  "homepage": "https://github.com/piabocanegra/odyssee#readme",
+  "dependencies": {
+    "@oberon-amsterdam/horizontal": "^1.0.4",
+    "scrollreveal": "^4.0.7",
+    "sweet-scroll": "^4.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

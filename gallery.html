@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C84B1Z8EV2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C84B1Z8EV2');
+    </script>
+    <title> odyssee - Gallery </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles/gallery.css" media="all" />
+    <link rel="stylesheet" href="https://use.typekit.net/qep5qwj.css">
+    <link rel="icon" type="image/png" href="./gallery-images/icon.png">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-drag.v1.min.js"></script>
+    <script src="./javascript/hardcoded_values.js"></script>
+    <script type="text/javascript" src="javascript/helper.js"></script>
+    <script type="text/javascript" src="javascript/general.js"></script>
+    <script type="text/javascript" src="javascript/indActFlowerGraph.js"></script>
+    <script type="text/javascript" src="javascript/MoodByActivityVis.js"></script>
+    <script type="text/javascript" src="javascript/MoodByActivityBursts.js"></script>
+    <script type="text/javascript" src="javascript/stressorRadialGraph.js"></script>
+    <script type="text/javascript" src="javascript/happinessDotPlot.js"></script>
+    <script type="text/javascript" src="javascript/balanceVis.js"></script>
+    <script type="text/javascript" src="javascript/depthBreadthVis.js"></script>
+    <script type="text/javascript" src="javascript/ikigaiVis.js"></script>
+    <script type="text/javascript" src="javascript/morningNightVis.js"></script>
+    <script type="text/javascript" src="javascript/thirtyDays.js"></script>
+    <script type="text/javascript" src="javascript/intuitorsVis.js"></script>
+    <script type="text/javascript" src="javascript/occupationActivityVis.js"></script>
+    <script type="text/javascript" src="javascript/values.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <ul>
+            <li style="float:right"><a href="/">Close</a></li>
+        </ul>
+    </div>
+
+    <div id="sticky-nav">
+        <div id="sticky-nav-strike-through"></div>
+        <div class="sticky-nav-element">
+            <span class="sticky-nav-label" id="sticky-nav-activity-label">Activity</span>
+            <a href="#activity" data-scroll>
+                <div class="sticky-nav-dot" id="activity-dot"></div>
+            </a>
+        </div>
+        <div class="sticky-nav-element">
+            <span class="sticky-nav-label" id="sticky-nav-time-label">Time</span>
+            <a href="#time-anchor" data-scroll>
+                <div class="sticky-nav-dot" id="time-dot"></div>
+            </a>
+        </div>
+        <div class="sticky-nav-element">
+            <span class="sticky-nav-label" id="sticky-nav-mood-label">Mood</span>
+            <a href="#mood" data-scroll>
+                <div class="sticky-nav-dot" id="mood-dot"></div>
+            </a>
+        </div>
+        <div class="sticky-nav-element">
+            <span class="sticky-nav-label" id="sticky-nav-attitude-label">Attitude</span>
+            <a href="#attitude" data-scroll>
+                <div class="sticky-nav-dot" id="attitude-dot"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="section" id="bringing-section">
+        <h1 id="one">Bringing you a vision<br>wider than yesterday</h1>
+    </div>
+
+    <div class="escaping-container">
+        <div class="line" style="position: absolute; bottom: 3em;">
+            <svg width="2000px" height="100vh" viewBox="0 0 2361 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M37,294.494704 C173.66788,322.660881 310.224307,336.74397 446.66928,336.74397 C724.067775,336.74397 1089.91688,282.737607 1284.09387,280.21399 C1438.96111,278.201261 1603.80087,290.386919 1778.61316,316.770965 C1918.69688,338.972776 2096.15916,381.049122 2311,443" id="path-1" stroke="#055244" stroke-width="3" stroke-linecap="round"></path>
+        </g>
+    </svg>
+        </div>
+
+        <div class="escaping-div">
+            <img class="odyssee-logo" src="./gallery-images/title.svg" />
+            <h2>ESCAPING THE TUNNEL</h2>
+            <p>Especially during these times, it’s too easy for us to feel as though our world is constricted, and our experiences unvarying—as if we are driving through a tunnel. In March, we created odyssee to escape that tunnel.</p>
+            <p>We started odyssee with a social challenge—50 people were asked to record their experiences, their activities, and feelings for 30 days.</p>
+        </div>
+    </div>
+
+    <div class="section" id="three-circles">
+        <img src='./gallery-images/3-circles-mobile.svg' style="width: 80%;" class="blob-mobile">
+        <img src='./gallery-images/3-circles-web.png' style="width: 100%;" class="blob-desktop">
+    </div>
+
+    <div class="section" style="justify-content: center;" id="methodology">
+        <div id="methodology-div">
+            <h2>METHODOLOGY</h2>
+            <p>Through a mobile app, participants were surveyed at varying frequencies: 4 times a day, 8 times a day, or 16 times a day. Each recorded moment was an opportunity to observe fleeting, or perhaps previously unnoticed, details.</p>
+            <p>
+                A record composed of responses to the following 3 prompts:<br> - How are you feeling?<br> - In the last 10 min, what kind of activity were you doing?<br> - I was doing this activity because...
+            </p>
+        </div>
+        <div class="line" id="methodology-line">
+            <svg width="1746" height="100vh" viewBox="0 0 1746 761" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-2a" d="M-924 786.763C-565.35 909.811 -269.053 971.335 -35.1089 971.335C315.808 971.335 527.144 690.376 892.687 706.432C1258.23 722.489 1328.47 360.71 1744.23 298.833" stroke="#10594B" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        </svg>
+        </div>
+    </div>
+
+    <div class="section" style="justify-content: center;">
+        <p>odyssee’s 1-month challenge took place in April 2020, an unprecedented time of self-isolation and reflection. Participants across the world were collectively experiencing reality in similar ways.</p>
+        <h2>WHY DID PEOPLE PARTICIPATE?</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="statistic-percent">62%</h2>
+                </td>
+                <td>
+                    <h3 class="statistic-text">Reflect on and learn from my actions and feelings</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="statistic-percent">21%</h2>
+                </td>
+                <td>
+                    <h3 class="statistic-text">Stay mindful of what is happening at each moment</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="statistic-percent">12%</h2>
+                </td>
+                <td>
+                    <h3 class="statistic-text">Compare my experiences and learn from others</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="statistic-percent">5%</h2>
+                </td>
+                <td>
+                    <h3 class="statistic-text">Motivate myself</h3>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section" id="stat-section">
+
+        <div class="line" id="stat-line">
+            <svg width="2695" height="304" viewBox="0 0 2695 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-2b" d="M-366 261.339C-150.859 394.849 27.8679 152.392 519.201 158.597C907.708 163.503 1112.92 261.487 1398.51 286.827C2044.61 344.156 2177.93 59.478 2097.46 41.5392C1937.53 5.88179 2077.28 315.315 2437.19 261.339C2697 222.375 2668.66 -72.2506 2761.95 -98" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        </svg>
+        </div>
+
+        <div class="stat-container">
+            <div class="stat-div">
+                <h2 class="stat-number">30</h2>
+                <h2>days</h2>
+            </div>
+
+            <div class="stat-div">
+                <h2 class="stat-number">50</h2>
+                <h2>participants</h2>
+            </div>
+
+            <div class="stat-div">
+                <h2 class="stat-number">12</h2>
+                <h2>cities</h2>
+            </div>
+
+            <div class="stat-div">
+                <img src="./gallery-images/cities.gif" height="200px" />
+            </div>
+
+            <div class="stat-div">
+                <h2 class="stat-number">5k</h2>
+                <h2>records</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <img src='./gallery-images/blob edges/Blob top mobile.png' style="width: 100%; margin-top: 8em;" class="blob-mobile">
+    <img src='./gallery-images/blob edges/Blob Desktop Left.png' style="height: 100vh" class="line">
+    <div class="section" id="chapters-blob">
+        <h1>The Data</h1>
+        <ul>
+            <li>
+                <a href="#activity" data-scroll>
+                    <h2>01 Activity</h2>
+                </a>
+            </li>
+            <li class="only-desktop">
+                <a href="#time-anchor" data-scroll>
+                    <h2>02 Time</h2>
+                </a>
+            </li>
+            <li class="only-mobile">
+                <a href="#time-div" data-scroll>
+                    <h2>02 Time</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#mood" data-scroll>
+                    <h2>03 Mood</h2>
+                </a>
+            </li>
+            <li>
+                <a href="#attitude" data-scroll>
+                    <h2>04 Attitude</h2>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <img src='./gallery-images/blob edges/Blob Desktop Right.png' style="height: 100vh; margin-right: 15em;" class="line">
+    <img src='./gallery-images/blob edges/Blob bottom mobile.png' style="width: 100%;" class="blob-mobile">
+
+    <div class="section-lined" id="activity">
+        <div id="activity-1" class="line">
+            <svg width="43" height="597" viewBox="0 0 43 597" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.8646 595C8.47763 480.322 -0.0106202 393.062 2.39984 333.218C7.12752 215.847 27.9054 98.3555 41.0234 2" id="path-activity-1" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div id="activity-text">
+            <h1>Activity</h1>
+            <h3>We categorized life's activities into two groups: Inflow and Bi-directional.</h3>
+        </div>
+        <div id="activity-2" class="line">
+            <svg width="105" height="188" viewBox="0 0 105 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+          <path id="path-activity-2" d="M44.5 190.17C55.9493 151.18 63.2135 120.385 66.292 97.7823C69.3705 75.18 70.7729 42.345 70.5 -0.722656" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          </svg>
+        </div>
+    </div>
+
+    <div class="line">
+        <svg width="443" height="100vh" viewBox="0 0 443 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+      <path id="path-3" d="M-25.5226 -12.8745C91.3109 34.0889 157.914 97.4875 174.286 177.321C190.657 257.155 279.96 316.699 442.197 355.954" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      </svg>
+    </div>
+
+    <div class="section" id="three">
+        <img src="./gallery-images/Inflow - Other.svg" height="150px" class="activity-type-icon">
+        <h2 style="margin-block-end: 0px;">INFLOW</h2>
+        <p class="condensed-text" style="margin-block-start: 0px;">Inflow activities lead to effects that are primarily internal to you.</p>
+    </div>
+
+
+    <div class="line">
+        <svg width="572px" height="100vh" viewBox="0 0 572 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M31,634 C143.111942,683.606754 177.179481,787.401361 526,825" id="path-4" stroke="#055244" stroke-width="3"></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section" id="four">
+        <img src="./gallery-images/Bi-Directional - Other.svg" height="150px" class="activity-type-icon">
+        <h2 style="margin-block-end: 0px;">BI-DIRECTIONAL</h2>
+        <p class="condensed-text" style="margin-block-start: 0px;">Bi-directional activities, in addition to their internal effects, also produce a significant external effect.</p>
+    </div>
+
+
+    <div class="line">
+        <svg width="619px" height="100vh" viewBox="0 0 619 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M20,851 C143.73,858.567879 246.162344,877.793144 327.297033,908.675797 C408.431722,939.55845 505.666045,996.333185 619,1079" id="path-5" stroke="#055244" stroke-width="3"></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section" id="grid-section" style="align-items: flex-end;">
+
+        <div class="activity-grid-title">
+            <span class="activity-row-label">INFLOW</span>
+        </div>
+        <div class="grid-container">
+
+            <div class="inflow-item activity-row-label-container">
+                <span class="activity-row-label">INFLOW</span>
+                <span class="activity-label">COMMUNICATION<br>(COLLABORATIVE)</span>
+            </div>
+
+            <div class="inflow-item" data-examples="movie, museum">
+                <div class="imgHover">
+                    <img src="./gallery-images/Consuming art.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">CONSUMING ART</span>
+            </div>
+
+            <div class="inflow-item" data-examples="internet search, fb">
+                <div class="imgHover">
+                    <img src="./gallery-images/Exploratory.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">EXPLORATORY</span>
+            </div>
+
+            <div class="inflow-item" data-examples="">
+                <div class="imgHover">
+                    <img src="./gallery-images/Eating and drinking.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">EATING/DRINKING</span>
+            </div>
+
+            <div class="inflow-item" data-examples="">
+                <div class="imgHover">
+                    <img src="./gallery-images/Exercise.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">EXERCISE</span>
+            </div>
+
+            <div class="inflow-item" data-examples="drinking, games">
+                <div class="imgHover">
+                    <img src="./gallery-images/Fun.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">FUN</span>
+            </div>
+
+            <div class="inflow-item" data-examples="reading, researching, attending lecture">
+                <div class="imgHover">
+                    <img src="./gallery-images/Learning.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">LEARNING</span>
+            </div>
+
+            <div class="inflow-item" data-examples="strolling, birdwatching">
+                <div class="imgHover">
+                    <img src="./gallery-images/Observation.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">OBSERVATION</span>
+            </div>
+
+            <div class="inflow-item" data-examples="rolling in bed, waiting">
+                <div class="imgHover">
+                    <img src="./gallery-images/Rest.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">REST</span>
+            </div>
+
+            <div class="inflow-item" data-examples="grooming, pooping">
+                <div class="imgHover">
+                    <img src="./gallery-images/Self-care.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">SELF-CARE</span>
+            </div>
+
+            <div class="inflow-item" data-examples="">
+                <div class="imgHover">
+                    <img src="./gallery-images/Inflow - Other.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">INFLOW<br>(OTHER)</span>
+            </div>
+        </div>
+
+        <div class="activity-grid-title">
+            <span class="activity-row-label">BI-DIRECTIONAL</span>
+        </div>
+
+        <div class="grid-container">
+            <div class="bidirectional-item activity-row-label-container">
+                <span class="activity-row-label">BI-DIRECTIONAL</span>
+                <span class="activity-label"></span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="emailing">
+                <div class="imgHover">
+                    <img src="./gallery-images/Communication - Virtual, Collaborative.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">COMMUNICATION<br>(COLLABORATIVE)</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="messaging">
+                <div class="imgHover">
+                    <img src="./gallery-images/Communication - Virtual, Social.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">COMMUNICATION<br>(SOCIAL)</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="meeting, appointment">
+                <div class="imgHover">
+                    <img src="./gallery-images/Collaboration.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">COLLABORATION</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="painting">
+                <div class="imgHover">
+                    <img src="./gallery-images/Creative.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">CREATIVE</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="writing, coding">
+                <div class="imgHover">
+                    <img src="./gallery-images/Intellectual.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">INTELLECTUAL</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="planning, commuting, errands">
+                <div class="imgHover">
+                    <img src="./gallery-images/Logistical.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">LOGISTICAL</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="housework">
+                <div class="imgHover">
+                    <img src="./gallery-images/Manual work.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">MANUAL WORK</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="date">
+                <div class="imgHover">
+                    <img src="./gallery-images/Romantic.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">ROMANTIC</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="partying, meal">
+                <div class="imgHover">
+                    <img src="./gallery-images/Socializing.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">SOCIALIZING</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="meditating, praying">
+                <div class="imgHover">
+                    <img src="./gallery-images/Spiritual.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">SPIRITUAL</span>
+            </div>
+
+            <div class="bidirectional-item" data-examples="">
+                <div class="imgHover">
+                    <img src="./gallery-images/Bi-Directional - Other.svg" class="activity-icon">
+                </div>
+                <span class="activity-label">BI-DIRECTIONAL<br>(OTHER)</span>
+            </div>
+        </div>
+
+        <span id="activity-display"></span>
+        <span id="activity-examples"></span>
+    </div>
+
+    <div class="line">
+        <svg width="723px" height="100vh" viewBox="0 0 723 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M-326,1059.84358 C-167.779915,1081.52338 -58.1180303,1086.45562 26.921209,1059.84358 C29.6828553,1058.97936 32.4412496,1058.05528 35.1962541,1057.07269 C229.855619,987.646029 407.592056,626.061612 519.837701,439.833426 C523.870852,433.141974 527.973864,426.807839 532.160381,420.864742 C602.070592,321.621581 654.350465,272 689,272" id="path-6" stroke="#055244" stroke-width="3"></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="five">
+        <svg style="margin-top: 10;" height="700" width="1000" class="univariate_activity"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="687px" height="100vh" viewBox="0 0 687 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Publicity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <g id="Horizontal-Scroll" transform="translate(-5161.000000, 0.000000)" stroke="#055244" stroke-width="3">
+              <path d="M5194,486.440615 C5233.41846,474.564188 5310.34752,458.509767 5426.30525,478.398812 C5585.45234,505.695687 5538.78463,698.562222 5655.33358,698.562222 C5733.03289,698.562222 5786.25503,723.374815 5815,773" id="path-new-4"></path>
+          </g>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="ikigai-vis">
+        <svg style="margin-top: 20;" height="800" width="1400" class="ikigai_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="685px" height="100vh" viewBox="0 0 685 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M26,290 C188.954773,330.026608 223.517909,515.136334 413.131257,698.481268 C481.745388,764.827089 558.034969,798 642,798" id="path-7" stroke="#055244" stroke-width="3"></path>
+      </g>
+    </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="occupation-vis">
+        <svg style="margin-top: 10;" height="750" width="1300" class="occupation_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="378px" height="100vh" viewBox="0 0 378 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Publicity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+            <g id="Horizontal-Scroll" transform="translate(-4087.000000, 0.000000)" stroke="#055244" stroke-width="3">
+                <path d="M4100,707 C4140.39692,701.218483 4180.75798,679.560271 4221.08319,642.025366 C4277,589.977706 4300.87713,508.541554 4342.0619,446.147792 C4363.79404,413.224209 4401.10674,393.508278 4454,387" id="path-new-1"></path>
+            </g>
+        </g>
+    </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="depth-breadth-vis">
+        <svg style="margin-top: 20;" height="700" width="1000" class="depth_breadth_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="327px" height="100vh" viewBox="0 0 327 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Publicity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <g id="Horizontal-Scroll" transform="translate(-5415.000000, 0.000000)" stroke="#055244" stroke-width="3">
+              <path d="M5427,671 C5461.59133,758.026292 5502.08091,817.116198 5548.46874,848.269719 C5594.85658,879.42324 5653.70033,895 5725,895" id="path-new-2"></path>
+          </g>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="values-vis">
+        <svg style="margin-top: 0;" height="750" width="1200" class="values_vis"></svg>
+    </div>
+
+    <div class="section-lined" id="time">
+        <div id="time-1" class="line">
+            <svg width="1674" height="560" viewBox="0 0 1674 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 321.002C218.676 83.2615 437.009 -21.5945 656.999 6.43387C876.99 34.4623 1025.66 218.318 1103 558" id="path-time-1" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        </div>
+        <div id="time-div">
+            <h1 id="time-anchor" style="transform: translateX(-300px);"></h1>
+            <h1>Time</h1>
+            <h3>Participants recorded their experiences - their activities<br> and feelings - every day for 30 days during the pandemic<br> at varying frequencies: 4x, 8x, or 16x a day.
+            </h3>
+        </div>
+        <div id="time-2" class="line">
+            <svg width="1672" height="302" viewBox="0 0 1672 302" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="path-time-2" d="M1136 2C1155.24 56.2333 1165 300 1165 300" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        </div>
+    </div>
+
+    <div class="line">
+        <svg width="324px" height="100vh" viewBox="0 0 324 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M47,-77 C75.9979947,-17.4062051 103.660179,17.8379771 129.986552,28.7325466 C178.59052,48.8461903 178.546568,129.478687 212.144591,196.034003 C222.75911,217.060617 250.710913,241.382616 296,269" id="path-8" stroke="#055244" stroke-width="3"></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="thirty-days-vis">
+        <svg style="margin-top: 20" height="700" width="1300" class="thirty_days_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="1201px" height="100vh" viewBox="0 0 1201 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M13,759.19717 C269.464698,837.412303 421.19519,865.768621 468.191476,844.266124 C516.900366,821.98005 505.382686,759.19717 456.697341,753.468921 C406.177232,747.524796 394.003831,799.493177 413.1655,829.96435 C421.388038,844.50127 492.081563,932.131429 644.419417,948.722394 C745.977987,959.783037 899.838181,930.558676 1106,861.049311" id="path-9" stroke="#055244" stroke-width="3"></path>
+      </g>
+    </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="morning-night-vis">
+        <svg style="margin-top: 20" height="700" width="1200" class="morning_night_vis"></svg>
+    </div>
+
+    <div class="section-lined" id="mood" style="overflow: hidden;">
+        <div class="line">
+            <svg width="1347" height="175" viewBox="0 0 1347 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-mood-1" d="M785.5 173.5C778.674 150.083 773.341 117.608 769.5 76.0753C768.008 59.9415 768.008 34.7497 769.5 0.5" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        </svg>
+        </div>
+        <div id="mood-div">
+            <h1>Mood</h1>
+            <h3>We asked participants to reflect on how they<br>were feeling at random moments of the day.</h3>
+            <h3 style="font-style: italic;">Prompt: How are you feeling?</h3>
+        </div>
+        <div class="line">
+            <svg width="1347" height="570" viewBox="0 0 1347 570" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M46 352.768C194.803 282.763 259.716 358.127 358.1 424.086C456.485 490.045 895.021 645.349 846.224 16.6333" id="path-mood-2" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        </div>
+    </div>
+
+    <div class="line">
+        <svg width="556px" height="100vh" viewBox="0 0 556 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M63,-184 L100.384902,-39.6266602 C178.721784,88.3705609 246.232512,172.495806 302.917086,212.749074 C359.60166,253.002342 431.629298,277.419318 519,286" id="path-10" stroke="#055244" stroke-width="3" stroke-linecap="round"></path>
+      </g>
+    </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="mood-by-activity-vis">
+        <svg style="margin-top: 0" height="700" width="1200" class="mood_by_activity_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="1266px" height="100vh" viewBox="0 0 1266 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M68,334 C144.58858,469.357084 407.999841,750.407535 658.391536,779.475476 C848.355749,801.528398 969.227819,749.823104 1196,758.953572" id="path-11" stroke="#085446" stroke-width="3"></path>
+      </g>
+    </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="happiness-vis">
+        <svg style="margin-top: 20" height="700" width="1050" class="happiness_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="641px" height="100vh" viewBox="0 0 641 1032" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Publicity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <g id="Horizontal-Scroll" transform="translate(-3531.000000, 0.000000)" stroke="#055244" stroke-width="3">
+              <path d="M3546,751 C3574.29525,731.856795 3596.86599,720.59885 3613.71223,717.226167 C3674.88877,704.978378 3752.24691,730.994418 3807.16609,680.00803 C3867.66877,623.83797 3866.61949,528.165303 3980.37048,528.165303 C4047.70881,528.165303 4104.25198,487.443535 4150,406" id="path-new-3"></path>
+          </g>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="stressor-radial-vis">
+        <svg style="margin-top: 20" height="1000" width="1300" class="stressor_radial_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="641" height="100vh" viewBox="0 0 641 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0)">
+      <path id="path-12" d="M-22.5023 456C-40.6631 304.324 40.2131 206.681 220.126 163.07C400.04 119.459 557.331 49.4358 692 -47" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      </svg>
+    </div>
+
+    <div class="section-lined" id="attitude" style="overflow: hidden;">
+        <div class="line">
+            <svg width="1573" height="316" viewBox="0 0 1573 316" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-attitude-1" d="M117.48 0C95.1598 87.3714 84 152.795 84 196.27C84 239.745 95.1598 279.655 117.48 316" stroke="#055244" stroke-width="3" stroke-linecap="square"/>
+        </g>
+        </svg>
+        </div>
+        <div id="attitude-div">
+            <h1>Attitude</h1>
+            <h3>Typically, there is a motivation behind the things we<br>do — a desire, an obligation, or a blend of both.</h3>
+            <h3 style="font-style: italic;">Prompt: I am doing this activity because...</h3>
+        </div>
+        <div class="line">
+            <svg width="1573" height="362" viewBox="0 0 1573 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-attitude-2" d="M189.265 -0.494141C243.676 216.772 384.94 325.405 613.055 325.405C841.17 325.405 1161.23 216.772 1573.24 -0.494141" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+        </g>
+      </svg>
+        </div>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="balance-vis">
+        <svg style="margin-top: 10;" height="700" width="1300" class="balance_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="1138px" height="100vh" viewBox="0 0 1138 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M57,654.547614 C253.0751,719.717251 395.583939,739.023652 484.526518,712.466816 C678.50607,654.547614 606.426793,489.803213 776.670841,399.403546 C860.546591,354.865485 957.322977,354.865485 1067,399.403546" id="path-13" stroke="#055244" stroke-width="3" transform="translate(562.000000, 545.000000) scale(1, -1) translate(-562.000000, -545.000000) "></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="personality-key-vis">
+        <svg style="margin-top: 0" height="750" width="1000" class="personality_key_vis"></svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="intuitors-vis">
+        <svg style="margin-top: 0" height="750" width="1000" class="intuitors_vis"></svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="feeler-thinker-vis">
+        <svg style="margin-top: 0" height="750" width="1300" class="feeler_thinker_vis"></svg>
+    </div>
+
+    <div class="section mobile-overflow-scroll" id="observer-vis">
+        <svg style="margin-top: 0" height="750" width="1000" class="observer_vis"></svg>
+    </div>
+
+    <div class="line">
+        <svg width="485px" height="100vh" viewBox="0 0 485 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+          <path d="M43,1249 C155.532536,1232.91356 243.488512,1192.67876 306.867927,1128.2956 C370.247342,1063.91243 429.6247,954.480569 485,800" id="path-14" stroke="#055244" stroke-width="3" transform="translate(264.000000, 1024.500000) scale(1, -1) translate(-264.000000, -1024.500000) "></path>
+      </g>
+  </svg>
+    </div>
+
+    <div class="ending-note-section">
+        <img src="./gallery-images/Squiggly-1.svg" class="blob-mobile" width="100%">
+        <div class="line">
+            <svg width="470" height="100vh" viewBox="0 0 470 1147" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path id="path-ending-note-1" d="M209.196 1147C209.196 1037.77 86.5613 1072.88 135.615 940.242C163.208 866.121 239.855 948.044 273.58 975.352C319.568 1010.46 371.688 1041.67 408.478 1092.39C408.478 1092.39 411.544 1096.29 411.544 1100.19L408.478 1104.09C396.215 1115.79 377.82 1104.09 365.556 1096.29C291.975 1037.77 187.735 924.638 172.406 811.506C166.274 756.89 181.604 690.572 206.131 639.858C224.526 600.847 261.316 557.934 291.975 538.429C322.634 518.923 316.502 515.022 347.161 495.517C423.808 444.803 417.676 327.769 426.874 238.045C426.874 234.144 429.94 226.341 433.005 222.44C436.071 222.44 436.071 222.44 439.137 222.44C448.335 230.243 463.664 241.946 466.73 253.649C469.796 265.352 466.73 280.956 463.664 296.561C439.137 397.99 328.766 554.033 236.789 554.033C147.879 554.033 138.681 319.967 212.262 319.967C285.843 319.967 276.646 542.33 212.262 542.33C147.879 542.33 37.5073 522.824 3.78264 292.66C-14.6126 175.627 114.154 140.518 169.34 93.7041C196.933 74.1986 209.196 62.4954 209.196 -3.82324" stroke="#484848" stroke-width="3" stroke-miterlimit="10"/>
+        </g>
+        </svg>
+        </div>
+        <div class="ending-note">
+            <h2>ENDING NOTE</h2>
+            <p>Whether you participated in the 30-day challenge or stumbled upon odyssee, we hope that you learned something new from a month’s worth of evanescent details. By weaving everyone’s recorded experiences into aggregate visualizations, we hope
+                to spark dialogue that connects us back to the wider world.</p>
+        </div>
+        <div class="line" id="ending-note-right-line">
+            <svg width="390" height="100vh" viewBox="0 0 390 1153" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+          <path id="path-ending-note-2" d="M207.886 -71.7422C207.886 35.3778 114.238 31.093 37.3136 129.643C-39.6112 228.194 23.9353 378.161 87.4819 421.009C151.028 463.857 268.088 421.009 304.878 326.744C341.668 232.478 291.5 142.498 261.399 112.504C231.298 82.5105 324.945 343.884 355.046 331.029C385.147 318.174 398.525 245.333 378.458 232.478C358.391 219.623 334.979 262.472 334.979 412.44C334.979 562.408 351.702 755.224 334.979 789.503C328.29 802.356 258.054 806.641 224.609 875.198C207.886 905.192 211.23 1170.85 211.23 1196.56" stroke="#484848" stroke-width="3" stroke-miterlimit="10"/>
+          </g>
+          </svg>
+        </div>
+        <img src="./gallery-images/Squiggly-2.svg" class="blob-mobile" width="100%">
+    </div>
+
+    <img src="./gallery-images/Footer Blob Mobile.png" class="blob-mobile">
+    <img src="./gallery-images/Footer Blob Desktop.png" class="line">
+    <div class="footer">
+        <div class="section" id="team-section">
+            <h1 style="white-space: nowrap;">The Team</h1>
+            <div class="grid-container">
+                <div class="team-member-div">
+                    <a target="_blank" href="https://github.com/jamalh110">
+                        <img class="team-member" src="./gallery-images/portraits/Jamal.svg">
+                        <div class="member-name"><span>Jamal Hashim</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://joshuadi.com/">
+                        <img class="team-member" src="./gallery-images/portraits/Josh.svg">
+                        <div class="member-name"><span>Josh Di</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://github.com/justindi15">
+                        <img class="team-member" src="./gallery-images/portraits/Justin.svg">
+                        <div class="member-name"><span>Justin Di</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://www.piaboc.me/">
+                        <img class="team-member" src="./gallery-images/portraits/Pia.svg">
+                        <div class="member-name"><span>Pia Bocanegra</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://www.linkedin.com/in/victor-odouard/">
+                        <img class="team-member" src="./gallery-images/portraits/Victor.svg">
+                        <div class="member-name"><span>Victor Odouard</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://www.linkedin.com/in/lesley-huang-48400/">
+                        <img class="team-member" src="./gallery-images/portraits/Lesley.svg">
+                        <div class="member-name"><span>Lesley Huang</span></div>
+                    </a>
+                </div>
+                <div class="team-member-div">
+                    <a target="_blank" href="https://artesiako.com/">
+                        <img class="team-member" src="./gallery-images/portraits/Yanlam.svg">
+                        <div class="member-name"><span>Yanlam Ko</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="end">
+            <h1>Discover</h1>
+            <img style="width: 100%;" src="./gallery-images/lines/Discover line.svg" />
+            <p class="end-section-text">odyssee is a part of <a style="color: white;" href="https://shiro.community/">shiro’s</a><br>family of projects that encourage reflection<br>and vulnerability.</p>
+            <p class="end-section-text">Drop a message —</p>
+            <div class="social-media-div">
+                <a href="https://www.instagram.com/shiro.community" target="_blank"><img width="48px" class="social-media-icon" height="48px" src="./gallery-images/social media icons/Instagram.svg" /></a>
+                <a href="https://www.facebook.com/shiro.space.community" target="_blank"><img width="52px" class="social-media-icon" height="52px" src="./gallery-images/social media icons/Facebook.svg" /></a>
+                <a href="mailto: shiro.space.community@gmail.com" target="_blank"><img height="48px" class="social-media-icon" src="./gallery-images/social media icons/Email.svg" /></a>
+            </div>
+
+            <p class="disclaimer-note">We take privacy seriously, and will only use participant data for the creation of visualizations as well as their personal information to contact them if needed. We respect their trust and protect their privacy, and therefore will never sell
+                or share this data with third parties.</p>
+        </div>
+    </div>
+    <script>
+        const getData = async() => {
+            // TODO for Jamal: replace next two lines with json list
+            var everyoneData = await d3.csv("odyssee_data.csv");
+            //var personData3 = getPersonData(everyoneData, email);
+
+            everyoneData.forEach(e => {
+                let activity = e["Activity"];
+                activityShortToLong[activity.split(":")[0]] = (activity.split(":")[1]).substring(1).split("(")[0]
+            });
+
+            //var categoryMap = getFrequencyByKey("Activity", personData3);
+            //var categoryFullMap = getFrequencyByKey("Activity", personData3, 1);
+
+            var categoryMap2 = getFrequencyByKey("Activity", everyoneData);
+            var categoryFullMap3 = getFrequencyByKey("Activity", everyoneData, 1);
+
+            // TODO for Jamal + Yanlam: parameters change for personalized/not personalized
+            drawMoodByActivityBursts(".mood_by_activity_vis", categoryMap2, categoryFullMap3, everyoneData, "Moods for Most Frequent Activities", false);
+
+            drawIndActivityFlower(".univariate_activity", "Most Frequent Activities", everyoneData, 15);
+
+            var personalityData = await d3.csv("personality.csv");
+            drawStressorRadialGraph(".stressor_radial_vis", everyoneData, personalityData);
+
+            drawBalanceGraph(".balance_vis", everyoneData, personalityData);
+
+            drawHappinessDotPlot(".happiness_vis", everyoneData, personalityData);
+            drawDepthBreadthPlot(".depth_breadth_vis", everyoneData, personalityData);
+
+            var ikigaiData = await d3.csv("ikigai.csv");
+            drawIkigaiVis(".ikigai_vis", ikigaiData);
+
+            let timeData = await d3.csv("time.csv");
+            drawMorningNightVis(".morning_night_vis", timeData);
+            drawThirtyDaysVis(".thirty_days_vis", timeData);
+
+            let mbtiData = await d3.csv("types.csv");
+            drawIntuitorsVis(".intuitors_vis", everyoneData, personalityData, mbtiData);
+            drawFeelerThinkerVis(".feeler_thinker_vis", everyoneData, personalityData, mbtiData);
+            drawObserverVis(".observer_vis", everyoneData, personalityData, mbtiData);
+            drawPersonalityKey(".personality_key_vis");
+
+            drawOccupationVis(".occupation_vis", ikigaiData, mbtiData, everyoneData);
+            drawValuesVis(".values_vis", ikigaiData, mbtiData, everyoneData);
+
+        }
+
+        function main() {
+            setUpFilters(".univariate_activity");
+            getData();
+        }
+
+        main();
+    </script>
+
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
