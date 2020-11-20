@@ -253,12 +253,13 @@
         const getData = async() => {
             // TODO for Jamal: replace next two lines with json list
             //var everyoneData = await d3.csv("odyssee_data.csv");
-            var everyoneData = await d3.csv("http://odyssee.community/odyssee_data.csv");
+            var everyoneData = await d3.csv("/odyssee_data.csv");
             //var personData3 = getPersonData(everyoneData, email);
             let email = getParameterByName("email")
             let key = getParameterByName("key")
+            let id = getParameterByName("id")
             var personData3 = await d3.json(`http://52.1.222.1:3005/api/data?email=${email}&key=${key}`);
-
+            email = id
             everyoneData.forEach(e => {
                 let activity = e["Activity"];
                 activityShortToLong[activity.split(":")[0]] = (activity.split(":")[1]).substring(1).split("(")[0]
