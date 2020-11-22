@@ -795,13 +795,17 @@ text-decoration: white line-through;
     justify-content: center;
   }
 
+  #univariate-activity-vis {
+    min-width: 1000px;
+  }
+
   #morning-night-vis {
     min-width: 1200px;
     justify-content: flex-end;
   }
 
   #mood-by-activity-vis {
-    min-width: 1000px;
+    min-width: 1200px;
   }
 
   #happiness-vis {
@@ -826,6 +830,7 @@ text-decoration: white line-through;
     margin-right: 300px;
     margin-left: 200px;
     justify-content: center;
+    min-width: 1000px;
   }
 
   #feeler-thinker-vis {
