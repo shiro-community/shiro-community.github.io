@@ -363,6 +363,28 @@ function drawHappinessDotPlot(svgClass, everyoneData, personalityData, email = n
 
 
     // drawStdDevAvgLegend(svg);
+    if (email != null) {
+      svg.append("circle")
+          .attr("cx", stdLegendAttr.x + 25)
+          .attr("cy", stdLegendAttr.y + 60)
+          .attr("r", 5)
+          .style("fill", colorHexArray[moodList[3]]);
+      svg.append("circle")
+          .attr("cx", stdLegendAttr.x + 25)
+          .attr("cy", stdLegendAttr.y + 60)
+          .attr("r", 15)
+          .attr("fill", "none")
+          .attr("stroke", greyColor)
+          .attr("stroke-width", 1.5);
+      svg.append("text")
+          .attr("x", stdLegendAttr.x + 50)
+          .attr("y", stdLegendAttr.y + 60)
+          .text("you")
+          .style("font-family", "Courier new")
+          .style("text-anchor", "start")
+          .style("fill", textColor)
+          .style("font-size", 12);
+    }
 
     let baseAnnotationY = rememberedScale(5);
     let annotation = ["Remembered happiness", "varies more than", "experienced happiness."];
