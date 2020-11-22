@@ -787,7 +787,7 @@ text-decoration: white line-through;
   }
 
   #values-vis {
-    margin-right: 150px;
+    min-width: 1200px;
   }
 
   #thirty-days-vis {
