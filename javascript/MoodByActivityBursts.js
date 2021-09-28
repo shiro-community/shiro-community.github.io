@@ -83,7 +83,7 @@ function drawMoodByActivityBursts(svgClass, categoryMap, categoryFullMap, person
     let reasonByActivity = getFrequencyByKeys("Activity", "Reason", personData);
     let feelingByActivity = getFrequencyByKeys("Activity", "Feeling", personData);
     let burstMap = getFrequencyByThreeKeys("Activity", "Feeling", "Reason", keyList, personData);
-    console.log(feelingByActivity);
+    // console.log(feelingByActivity);
     let avgMap = findAvgMood(keyList, feelingByActivity, false);
     let stdDevMap = findStdDevMood(keyList, feelingByActivity, avgMap);
 
@@ -149,7 +149,7 @@ function drawMoodByActivityBursts(svgClass, categoryMap, categoryFullMap, person
                 return 'url(#' + moodList[Math.round(avgMap[keyList[i]])] + ')';
             })
             .on('mousemove', function() {
-                let tooltipText = "<b>ACTIVITY:</b> " + activity
+                let tooltipText = "<b>ACTIVITY:</b> " + keyList2[i].split("(")[0].toLowerCase()
                 + "</br></br><b>TOTAL FREQUENCY: </b>" + getTotalFrequencyFromMap(feelingByActivity[activity]);
                 setTooltipText(tooltip, tooltipText, 20, 175);
             }).on("mouseout", function(d) {
