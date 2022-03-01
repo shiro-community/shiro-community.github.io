@@ -834,12 +834,13 @@ text-decoration: white line-through;
   }
 
   #feeler-thinker-vis {
-    min-width: 1200px;
+    min-width: 1300px;
     margin-right: 200px;
     justify-content: center;
   }
 
   #observer-vis {
+    min-width: 1050px;
     margin-right: 200px;
     justify-content: center;
   }
